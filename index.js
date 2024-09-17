@@ -23,10 +23,11 @@ bot.onText(/\/start/, (msg) => {
                 [
                     {
                         text: "VAPE SHOP",
-                        web_app: { url: 'http://localhost:3001/shop.html' }
+                        web_app: { url: 'https://kukanpuss1-a.github.io/nebula-vape-shop/shop.html' }
                     }
                 ]
             ]
         }
     });
 });
+
