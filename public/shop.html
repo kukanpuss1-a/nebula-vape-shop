@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nebula Vape Shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .product {
+            margin: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        .product img {
+            width: 100px;
+            height: auto;
+        }
+        .buy-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Nebula Vape Shop</h1>
+
+    <div class="product">
+        <h2>Liquid A</h2>
+        <img src="https://via.placeholder.com/100" alt="Liquid A">
+        <p>Price: $10</p>
+        <button class="buy-button" onclick="buyProduct('Liquid A', 1000)">Buy</button>
+    </div>
+
+    <div class="product">
+        <h2>Liquid B</h2>
+        <img src="https://via.placeholder.com/100" alt="Liquid B">
+        <p>Price: $15</p>
+        <button class="buy-button" onclick="buyProduct('Liquid B', 1500)">Buy</button>
+    </div>
+
+    <script>
+        function buyProduct(productName, price) {
+            // Вызов API оплаты
+            Telegram.WebApp.showAlert(`You selected ${productName}. Proceeding with the purchase for $${price / 100}`);
+            // Логика для интеграции с оплатой через Telegram WebApp
+        }
+
+        // Уведомляем Telegram, что Web App готов
+        Telegram.WebApp.ready();
+    </script>
+</body>
+</html>
