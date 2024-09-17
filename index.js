@@ -15,19 +15,17 @@ app.listen(3001, () => {
 });
 
 // Обработка команды /start и создание кнопки для открытия веб-приложения
-bot.onText(/\/start/, (msg) => {
-    const chatId = msg.chat.id;
-    bot.sendMessage(chatId, "Welcome to Nebula Vape!", {
-        reply_markup: {
-            inline_keyboard: [
-                [
-                    {
-                        text: "VAPE SHOP",
-                        web_app: { url: 'https://kukanpuss1-a.github.io/nebula-vape-shop/shop.html' }
-                    }
-                ]
-            ]
-        }
-    });
-});
+bot.sendMessage(chatId, "Welcome to Nebula Vape!", {
+    reply_markup: {
+      inline_keyboard: [
+        [
+          {
+            text: "VAPE SHOP",
+            web_app: { url: 'https://kukanpuss1-a.github.io/nebula-vape-shop/' }
+          }
+        ]
+      ]
+    }
+  });
+  
 
